@@ -2,7 +2,7 @@ const express = require('express');
 const db = require('../db');
 const router = express.Router();
 router.get('/cates',async(req,res) => {
-    let r = await db('selecter * from category')
+    let r = await db('select * from category')
     console.log(r)
     if (r) {
         res.send({ status: 0, message: '获取分类列表成功', data: r });
