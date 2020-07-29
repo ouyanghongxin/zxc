@@ -13,7 +13,7 @@ router.get('/cates',async(req,res) => {
 //添加数据
 router.post('/addcates',async(req,res) => {
     console.log(req.body)
-    let r = await db('insert into category setwe?',req.body)
+    let r = await db('insert into category set?',req.body)
     console.log(r)
     if(r && r.affectedRows > 0){
         res.send({status:0,message:'获取成功',})
